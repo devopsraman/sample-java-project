@@ -33,8 +33,10 @@
     </snapshotRepository>
   </distributionManagement>
 
+<build>
     <plugins>
   <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-deploy-plugin</artifactId>
     <version>2.8.1</version>
     <executions>
@@ -48,14 +50,6 @@
     </executions>
   </plugin>
 
-  <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-deploy-plugin</artifactId>
-    <version>${maven-deploy-plugin.version}</version>
-    <configuration>
-      <skip>true</skip>
-    </configuration>
-  </plugin>
 
     <plugin>
         <groupId>org.sonatype.plugins</groupId>
@@ -77,4 +71,5 @@
         </configuration>
     </plugin>
     </plugins>
+</build>
 </project>
