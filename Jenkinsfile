@@ -1,13 +1,29 @@
+pipeline {
+    agent any
 
-stage 'Init'
-node {
-  checkout scm
-  sh 'echo $BRANCH_NAME'
-}
-if (env.BRANCH_NAME == 'master') {
-  stage 'Only on master'
-  println 'This happens only on master'
-} else {
-  stage 'Other branches'
-  println "Current branch ${env.BRANCH_NAME}"
+    stages {
+        stage('Build') {
+            steps {
+                withMaven(maven : 'm2'){
+                sh 'mvn clean compile'
+                }
+            }
+        }
+        stage('Tting stage'){
+            steps {
+                withMaven(maven : 'm2'){
+                   sh 'mvn test'
+                }
+
+            }
+        }
+        stage('Deploy') {
+            steps {
+                   withMaven(maven : 'm2'){
+                     sh 'mvn deploy'
+                   }
+
+            }
+        }
+    }
 }
