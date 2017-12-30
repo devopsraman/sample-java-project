@@ -1,7 +1,7 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.companyname.devops</groupId>
-  <artifactId>sample-java-project</artifactId>
+  <artifactId>devops</artifactId>
   <version>1.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
