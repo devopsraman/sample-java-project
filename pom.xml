@@ -1,11 +1,11 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.companyname.devops</groupId>
-  <artifactId>devops</artifactId>
+  <artifactId>sample-java-project</artifactId>
   <version>1.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>sample-project</name>
+  <name>sample-java-project</name>
   <description>@description@</description>
   <url>@project.url@</url>
 
